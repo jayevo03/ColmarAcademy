@@ -29,6 +29,10 @@ p {
   color: #666;
 }
 
+.centered {
+  text-align: center;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -126,11 +130,9 @@ p {
 
 
 /* page sections */
-.section {
-  display: flex;
-}
 
 .section.one {
+  display: flex;
   padding-top: 4rem;
   background-color: #f4f4f4;
   align-items: center;
@@ -142,7 +144,6 @@ p {
 }
 
 .intro {
-  flex-shrink: 2;
   max-width: 18rem;
 }
 
@@ -159,6 +160,10 @@ p {
   height: auto;
   display: block;
 }
+.section.two {
+  display: flex;
+}
+
 
 .info-copy {
   padding: 2rem 0 2rem 0;
@@ -203,6 +208,93 @@ p {
 .news-text p {
   padding: 0.5rem 0;
 }
+
+.section.three {
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+  justify-content: center;
+}
+
+.courses-container {
+  display: flex;
+  padding: 0 3rem 2rem 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-block {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+.course-text {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.category {
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+.syllabus {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 550px){
+
+  .courses-container {
+    display: block;
+    padding: 0;
+  }
+  .course-block {
+    padding: 0;
+  }
+  .course-text {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .course-text.top {
+    padding-top: 0;
+  }
+
+
+  .section.three {
+    background-color: #fff;
+  }
+
+  .course-title {
+    background-color: #f4f4f4;
+    padding: 1rem;
+  }
+
+
+
+  .category, .syllabus, .course-image {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 980px){
+  .news-text p {
+    font-size: 80%;
+  }
+  .course-block {
+    flex-basis: 50%;
+  }
+}
+
+
+
 
 
 @media only screen and (min-width: 711px){
@@ -267,15 +359,5 @@ p {
     text-align: center;
     padding-top: 1rem;
     max-width: 100%;
-  }
-}
-
-
-
-
-
-@media only screen and (max-width: 980px){
-  .news-text p {
-    font-size: 80%;
   }
 }
