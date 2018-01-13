@@ -69,7 +69,7 @@ p {
 
 /* header */
 
-.header {
+header {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -101,14 +101,12 @@ p {
 }
 
 .menu {
-  padding-right: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 .menu a {
   margin-left: 1rem;
 }
-
-
 
 @media only screen and (min-width: 711px){
   .mob-icon {
@@ -128,7 +126,6 @@ p {
   }
 }
 
-
 /* page sections */
 
 .section.one {
@@ -138,7 +135,7 @@ p {
   align-items: center;
 }
 
-.banner, .info-main {
+.banner, .info-main, .video {
   max-width: 60%;
   padding: 2rem 1.5rem;
 }
@@ -151,19 +148,19 @@ p {
   padding-bottom: 2rem;
 }
 
-.image-container {
+.image-container, .video-container {
   overflow: hidden;
 }
 
-.image-container img {
+.image-container img, .video-container video {
   max-width: 100%;
   height: auto;
   display: block;
 }
-.section.two {
+
+.section.two, .flex-container {
   display: flex;
 }
-
 
 .info-copy {
   padding: 2rem 0 2rem 0;
@@ -178,13 +175,16 @@ p {
   opacity: 0.6;
 }
 
-.news-articles {
+.news-articles, .exhibits {
   max-width: 40%;
-  padding: 1rem 0 2rem 0;
   border-left: 1px solid #f4f4f4;
 }
 
-.news {
+.news-articles {
+  padding: 1rem 0 2rem 0;
+}
+
+.news, .exhibit {
   max-width: 100%;
   display: flex;
   padding: 1rem;
@@ -192,11 +192,11 @@ p {
   transition: 300ms ease-out;
 }
 
-.news-image {
+.news-image, .exhibit-image {
   max-width: 35%;
 }
 
-.news-text {
+.news-text, .exhibit-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,7 +212,6 @@ p {
 .section.three {
   padding: 2rem 0;
   background-color: #f4f4f4;
-  justify-content: center;
 }
 
 .courses-container {
@@ -230,14 +229,12 @@ p {
   box-sizing: border-box;
 }
 
-
 .course-text {
   padding: 1rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   flex: 1;
-
 }
 
 .category {
@@ -249,15 +246,58 @@ p {
   padding-bottom: 0.5rem;
 }
 
+.section.four {
+  padding: 2rem 0;
+}
+
+.section.four .flex-container {
+  padding-top: 1rem;
+}
+
+.video {
+  padding-top: 0rem;
+}
+
+.exhibits {
+  padding: 0rem 0 2rem 0;
+}
+
+.video-copy {
+  padding: 1.5rem 0 2rem 0;
+}
+
+.video-copy h3 {
+  padding-bottom: 0.5rem;
+}
+
+.exhibit.no1 {
+  background-color: #f4f4f4;
+}
+
+/* footer */
+footer {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #f4f4f4;
+}
+
+.footer-links a {
+  padding-left: 0.5rem;
+}
+
 @media only screen and (max-width: 550px){
 
   .courses-container {
     display: block;
     padding: 0;
   }
+
   .course-block {
     padding: 0;
   }
+
   .course-text {
     padding: 0.25rem 0.5rem;
   }
@@ -265,7 +305,6 @@ p {
   .course-text.top {
     padding-top: 0;
   }
-
 
   .section.three {
     background-color: #fff;
@@ -276,36 +315,37 @@ p {
     padding: 1rem;
   }
 
-
-
   .category, .syllabus, .course-image {
     display: none;
   }
+
+  .footer-links a {
+    display: none;
+  }
+
+  footer {
+    border-top: none;
+  }
 }
 
-
 @media only screen and (max-width: 980px){
-  .news-text p {
+  .news-text p, .exhibit-text p{
     font-size: 80%;
   }
+
   .course-block {
     flex-basis: 50%;
   }
 }
 
-
-
-
-
 @media only screen and (min-width: 711px){
   img.mobile {
     display: none;
   }
-  .item3 {
+  .news.item3 {
     background-color: #f4f4f4;
   }
 }
-
 
 
 @media only screen and (max-width: 710px){
@@ -318,6 +358,7 @@ p {
     width: 100%;
     padding: 0;
   }
+  
   .banner {
     max-width: 100%;
   }
@@ -331,7 +372,7 @@ p {
     padding-top: 1rem;
   }
 
-  .info-main {
+  .info-main, .exhibits, .video-copy {
     display: none;
   }
 
@@ -359,5 +400,14 @@ p {
     text-align: center;
     padding-top: 1rem;
     max-width: 100%;
+  }
+
+  .section.four .flex-container {
+    padding-top: 0.5rem;
+  }
+
+  .video {
+    max-width: 100%;
+    padding: 0;
   }
 }

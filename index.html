@@ -5,13 +5,15 @@
     <link href="./resources/css/reset.css" rel="stylesheet" type="text/css">
     <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="./resources/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
     <title>Colmar Academy - Learn something new everyday</title>
   </head>
 
   <body>
     <!-- header and menu section -->
     <div class="container">
-      <div class="header">
+      <header>
         <div class="company mob-header">
           <img class="logo" src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
           <img class="mob-icon" src="./resources/images/ic-on-campus.svg" alt="On campus">
@@ -19,13 +21,13 @@
           <img class="mob-icon" src="./resources/images/ic-login.svg" alt="Login">
           <span class="title"><span class="title-style">Colmar</span>Academy<span>
         </div>
-        <div class="menu">
+        <nav class="menu">
           <span><a href="#">On Campus</a></span>
           <span><a href="#">Online</a></span>
           <span><a href="#">For Companies</a></span>
           <span><a class="menu-btn" href="#">Sign in</a></span>
-        </div>
-      </div>
+        </nav>
+      </header>
     </div>
 
     <!-- main page sections -->
@@ -150,12 +152,50 @@
           </div>
         </div>
       </div>
-
-      </div>
-
     </div>
 
-
+    <div class="section four container">
+      <h2 class="centered">Thesis exhibit</h2>
+      <div class="flex-container">
+        <div class="video">
+          <div class="video-container">
+            <video src="./resources/videos/thesis.mp4" controls autoplay loop alt="Clouds in a blue sky moving quickly over a building before turning to night">Video not supported
+            </video>
+          </div>
+          <div class="video-copy">
+            <h3>Reimagine urban</h3>
+            <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequate neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+          </div>
+        </div>
+        <div class="exhibits">
+          <div class="exhibit no1">
+            <div class="image-container exhibit-image">
+              <img src="./resources/images/thesis-fisma.jpg" alt="hand on a desk highlighting text on a piece of paper with a pink highlighter">
+            </div>
+            <div class="exhibit-text">
+              <h3>Fisma: Design and Prototype</h3>
+              <p>Designer showcase of new prototype product</p>
+            </div>
+          </div>
+          <div class="exhibit no2">
+            <div class="image-container exhibit-image">
+              <img src="./resources/images/thesis-now-and-then.jpg" alt="Skyline photograph of New York City in daytime">
+            </div>
+            <div class="exhibit-text">
+              <h3>Now and then</h3>
+              <p>Research study about New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container flex-container">
+      <span class="footer-credits"><p>© 2018 Colmar Academy. All rights reserved</p></span>
+      <div class="footer-links">
+        <span><a href="#">Terms</a></span>
+        <span><a href="#">Privacy</a></span>
+      </div>
+    </footer>
 
   </body>
 </html>
